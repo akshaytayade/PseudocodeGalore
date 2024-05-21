@@ -1,0 +1,17 @@
+quicksort has 2 subprocedures
+1. quicksort
+2. partition
+
+quicksort(A,start,end)
+    pid = partition(A,start,end)
+    quicksort = (A, start, pid-1)
+    quicksort = (A, pid+1,end)
+
+partition(A,start,end)
+pivot = A[end]
+pid = start
+for A(start) till A(end-1)
+    if A(i) < pivot
+        swap A(i) with A(pid)
+        pid += 1
+swap A(pid) with A(end)

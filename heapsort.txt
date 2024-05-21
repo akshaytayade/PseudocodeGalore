@@ -1,0 +1,33 @@
+ Average and worst time complexity: O (nlogn)
+
+heapSort has 3 subprocedures
+
+1. max_heapify(A,i)
+2. build_max_heap(n)
+3. heapSort(A)
+
+max_heapify(A,i)
+// i is to be considered the selected node in the heap
+left = Left(i)
+right = Right(i)
+largest = i
+if largest <= A.heap_size && A(l) > A (i) //check if left element is greater
+    largest = l
+if largest <= A.heap_size && A(r) > A (i)
+    largest = r
+if largest != i
+    exchange A(i) with A(largest)
+    max_heapify(A,1)
+
+
+build_max_heap(n)
+A.length = A.heap_size
+for i = floor(A.length/2) to 1
+    max_heapify(A,i)
+
+heapSort(A)
+build_max_heap(n)
+for i = n to 1
+    swap A(1) with A(i)
+    n = n-1
+    max_heapify(A,1)

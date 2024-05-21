@@ -1,0 +1,14 @@
+function bellmanford(G,s) //G is graph, s is source
+for each vertex in G
+  dist[V] = infinity
+  dist[s] = 0
+for each vertex in G
+  for each edge(u,v) in G
+    tempDist =  dist[u] + edgeWeight(u,v)
+    if tempDist < dist[v]:
+      dist[v] = tempDist
+      prev[v] = u
+for each edge(u,v) in G
+  if dist[u] + edgeWeigth(u,v) < dist[v]
+    Error: Negative Cycle detected
+return dist[],prev[]

@@ -1,0 +1,21 @@
+function Place(k, i) // k = queen, i = column
+{
+    for j = 1 to k - 1 do
+        if (x[j] = i) //same column OR |x[j] - i| = |i - x[j]| // same diagonal then
+            return false
+    return true
+}
+
+//Uses recursion
+function N_Queens(k, n)
+{
+    for i = 1 to n do
+        if Place(k, i) then
+        {
+            x[k] = i
+            if (k = n) then
+                write(x[1 ... n])
+            else
+                N_Queens(k + 1, n)
+        }
+}

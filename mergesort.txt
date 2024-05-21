@@ -1,0 +1,31 @@
+mergesort has 2 subprocedures
+1. merge
+2. mergesort
+
+mergeSort(A)
+  if (A.length <= 0)
+    return A
+  mid = A.length/2 //integer division
+  low = A[0,mid]
+  high = A[mid+1,n]
+  left = mergeSort(low,mid,A)
+  right = mergeSort(mid+1,high,A)
+  return merge(left,right)
+
+merge(left,right)
+  sorted_list = []
+  l,r = 0,0
+  while l != length(left) or r != length(right)
+    if length(left) == l
+      sorted_list.add(right(r))
+      r += 1
+    elif length(right) == r
+      sorted_list.add(left(l))
+      l += 1
+    elif left(l) < right(r)
+      sorted_list.add(left(l))
+      l += 1
+    else
+      sorted_list.add(right(r))
+      r += 1
+  return sorted_list

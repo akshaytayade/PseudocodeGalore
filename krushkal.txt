@@ -1,0 +1,11 @@
+function Krushkal(edges,V,E)
+e = i = sum = 0
+sort(edges)
+while(e < V - 1):
+  u = Edges(i).u
+  v = Edges(i).v
+  if (adding edge(u,v) causes no cycle):
+      sum += edges(i).weight
+      e += 1
+  i += 1
+return sum

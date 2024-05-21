@@ -1,0 +1,3 @@
+radixsort(A,d)
+for i = 1 to d
+  use stable sort on A on digit i

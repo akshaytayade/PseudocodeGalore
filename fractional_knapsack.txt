@@ -1,0 +1,9 @@
+function FracKnapsack
+for each item(i) in S:
+  xi = 0
+  vi = bi/wi
+  w = 0
+  while w < W:
+    remove item(i) with highest vi
+    xi = min(wi, w-W)
+    w = w + min(xi)

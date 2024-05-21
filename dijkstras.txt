@@ -1,0 +1,16 @@
+function Dijsktra(graph, source)
+dist = map(all nodes =  infinity)
+dist = 0
+//Create empty set of visited nodes
+visited = empty set
+queue = new PriorityQueue()
+queue.enqueue(source,0)
+while queue is not empty:
+  current = queue. dequeue()
+  visited.add(current)
+  for neighbour.nodes in graph.neighbour(current):
+    tentative_dist = dist(current) + dist(current to neighbour)
+    if tentative_dist < dist(neighbour):
+      dist(neighbour) = tentative_dist
+      queue.enqueue(neighbour,dist(neighbour))
+return distances

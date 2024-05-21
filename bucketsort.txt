@@ -1,0 +1,13 @@
+Best Case:	O(n + k)
+Average Case:	O(n + k)
+Worst Case:	O(n2)
+
+Space Complexity:	O(n*k)
+
+bucketsort(A)
+n = length(A)
+for i = 1 to n do
+  insert A[i] into bucket B[floor(n,A(i))]
+for i = 0 to n-1 do
+  sort bucket using insertion sort
+concatenate buckets from B[0],B[1],...,B[n-1]

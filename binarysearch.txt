@@ -1,0 +1,16 @@
+Time complexity : O(nlogn)
+BinarySearch(array, target):
+left <- 0
+right <- length(array) - 1
+
+while left <= right:
+    mid <- (left + right) / 2
+
+    if array[mid] = target:
+        return mid
+    else if array[mid] < target:
+        left <- mid + 1
+    else:
+        right <- mid - 1
+
+return -1  // indicating target not found

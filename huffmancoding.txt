@@ -1,0 +1,16 @@
+Algorithm Huffman(c)
+{
+    n = |c|  // Number of distinct characters
+    Q = c  // Priority queue initialized with characters and their frequencies
+    for i = 1 to n - 1 do
+    {
+        temp = get_node()  // Create a new internal node
+        left(temp) = Get_min(Q)  // Extract the node with the minimum frequency
+        right(temp) = Get_min(Q)  // Extract the next node with the minimum frequency
+        a = left(temp)  // Left child of temp
+        b = right(temp)  // Right child of temp
+        F[temp] = f[a] + f[b]  // Frequency of temp is the sum of frequencies of its children
+        insert(Q, temp)  // Insert the new node back into the priority queue
+    }
+    return Get_min(Q)  // The root of the Huffman tree
+}

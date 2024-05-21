@@ -1,0 +1,12 @@
+function Prim(graph)
+mst = empty
+startVertex =  first vertex of graph
+mst.add(startVertex)
+edges = all edges connected to the startVertex
+while (mst is not empty):
+  minEdge, minWeight = findMinEdge(edges)
+  mst.add(minEdge)
+  for edge in edges connected to minEdge:
+      edges.add(edge)
+  edges.remove(minEdge)
+return mst[]

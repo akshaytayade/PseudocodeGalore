@@ -1,0 +1,20 @@
+function ScheduleJobs(jobs, n):
+// Initialize
+jobSequence = []
+
+// Sort jobs by priority (non-increasing order)
+sortedJobs = sortByPriority(jobs)
+
+// Iterate through sorted jobs
+for each job in sortedJobs:
+    // Find the latest position to insert the job
+    position = findLatestPosition(job, jobSequence)
+
+    // If a valid position is found
+    if position >= 0:
+        // Insert the job at the found position
+        insertJob(job, jobSequence, position)
+
+return jobSequence
+
+NOTE: sortedJobs(), findLatestPosition(), insertJob() are helper functions.
