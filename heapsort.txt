@@ -1,4 +1,4 @@
- Average and worst time complexity: O (nlogn)
+Average and worst time complexity: O (nlogn)
 
 heapSort has 3 subprocedures
 
