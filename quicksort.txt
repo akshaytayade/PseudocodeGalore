@@ -10,8 +10,9 @@ quicksort(A,start,end)
 partition(A,start,end)
 pivot = A[end]
 pid = start
-for A(start) till A(end-1)
+for i = A(start) till A(end-1)
     if A(i) < pivot
         swap A(i) with A(pid)
         pid += 1
 swap A(pid) with A(end)
+return pid

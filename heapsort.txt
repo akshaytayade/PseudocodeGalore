@@ -27,7 +27,7 @@ for i = floor(A.length/2) to 1
 
 heapSort(A)
 build_max_heap(n)
-for i = n to 1
+for i = n to 2
     swap A(1) with A(i)
     n = n-1
     max_heapify(A,1)
