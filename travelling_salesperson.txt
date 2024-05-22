@@ -1,0 +1,33 @@
+function travelingSalesperson(graph, start):
+    n = number of nodes in graph
+    bound = infinity
+    bestPath = []
+    optimalCost = infinity
+
+    procedure explore(currentNode, currentCost, visited, path):
+        # Base case: If all nodes have been visited
+        if length(visited) == n:
+            # Check if the current path is a tour
+            if graph[currentNode][start] != infinity:
+                totalCost = currentCost + graph[currentNode][start]
+                # Update the optimal solution if a better path is found
+                if totalCost < optimalCost:
+                    optimalCost = totalCost
+                    bestPath = path + [start]
+
+        else:
+            # Try visiting each unvisited node from the current node
+            for nextNode in unvisitedNodes(visited):
+                # Calculate a lower bound for the remaining path
+                lowerBound = currentCost + graph[currentNode][nextNode]
+                if lowerBound < bound:
+                    visited.append(nextNode)
+                    path.append(nextNode)
+                    explore(nextNode, lowerBound, visited, path)
+                    visited.remove(nextNode)
+                    path.remove(nextNode)
+
+    # Start the exploration from the start node
+    explore(start, 0, [start], [start])
+
+    return bestPath, optimalCost
