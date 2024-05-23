@@ -8,8 +8,8 @@ heapSort has 3 subprocedures
 
 max_heapify(A,i)
 // i is to be considered the selected node in the heap
-left = Left(i)
-right = Right(i)
+l = Left(i)
+r = Right(i)
 largest = i
 if largest <= A.heap_size && A(l) > A (i) //check if left element is greater
     largest = l
